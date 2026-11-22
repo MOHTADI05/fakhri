@@ -86,6 +86,7 @@
         <nav class="nav" id="navigation" aria-label="Navigation principale">
           <ul class="nav-list">
             <li><a href="#services">Expertise</a></li>
+            <li><a href="#chantier">Chantier</a></li>
             <li><a href="#engagements">Engagements</a></li>
             <li><a href="#ouvrages">Ouvrages</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -146,6 +147,98 @@
           <p class="hero-phone">
             <a href="tel:+33752788708">07 52 78 87 08</a>
           </p>
+        </div>
+      </section>
+
+      <div class="mortar" aria-hidden="true"></div>
+
+      <section class="build" id="chantier" aria-labelledby="build-title">
+        <div class="build-pin">
+          <div class="wrap build-inner">
+            <header class="build-copy">
+              <p class="eyebrow">Chantier</p>
+              <h2 id="build-title">La maison s'élève</h2>
+              <p class="build-stage-label" id="build-stage-label" aria-live="polite">Préparation du terrain</p>
+            </header>
+
+            <figure class="build-figure">
+              <svg
+                class="build-house"
+                viewBox="0 0 480 540"
+                role="img"
+                aria-labelledby="build-svg-title build-svg-desc"
+              >
+                <title id="build-svg-title">Maison en construction</title>
+                <desc id="build-svg-desc">
+                  Une maison se construit au fil du défilement : excavation, fondations, briques, ouvertures, puis toiture.
+                </desc>
+
+                <g class="build-scene">
+                  <g class="build-dust" fill="#F26A1B" opacity="0.35">
+                    <circle class="dust" cx="86" cy="300" r="1.4" />
+                    <circle class="dust" cx="118" cy="210" r="1.1" />
+                    <circle class="dust" cx="390" cy="250" r="1.3" />
+                    <circle class="dust" cx="410" cy="340" r="1" />
+                    <circle class="dust" cx="70" cy="380" r="1.2" />
+                    <circle class="dust" cx="360" cy="180" r="1" />
+                    <circle class="dust" cx="200" cy="150" r="1.1" />
+                    <circle class="dust" cx="300" cy="130" r="0.9" />
+                  </g>
+
+                  <g class="build-soil" fill="none" stroke="#8a5a3a" stroke-width="1.4">
+                    <path d="M40 470 H440" stroke="#c8c8c8" />
+                    <path d="M78 470 L98 438 H382 L402 470" opacity="0.7" />
+                    <path d="M110 454 H370" opacity="0.35" />
+                  </g>
+
+                  <g class="build-scaffold" fill="none" stroke="rgba(242,106,27,0.5)" stroke-width="1.15">
+                    <path d="M56 470 V150" />
+                    <path d="M424 470 V150" />
+                    <path d="M56 410 H108" />
+                    <path d="M56 340 H108" />
+                    <path d="M56 260 H108" />
+                    <path d="M56 190 H108" />
+                    <path d="M372 410 H424" />
+                    <path d="M372 340 H424" />
+                    <path d="M372 260 H424" />
+                    <path d="M372 190 H424" />
+                    <path d="M48 150 H68 M412 150 H432" />
+                  </g>
+
+                  <g class="build-foundation" fill="#1a1a1a" stroke="#F26A1B" stroke-width="1.7">
+                    <rect x="92" y="438" width="296" height="28" />
+                    <path d="M92 452 H388" fill="none" />
+                    <path d="M108 438 V424" fill="none" stroke="#ffffff" opacity="0.45" />
+                    <path d="M372 438 V424" fill="none" stroke="#ffffff" opacity="0.45" />
+                  </g>
+
+                  <g class="build-bricks" fill="#2a2a2a" stroke="#d8d8d8" stroke-width="0.85"></g>
+
+                  <g class="build-openings" fill="none" stroke="#ffffff" stroke-width="1.45">
+                    <rect class="build-window" x="148" y="268" width="54" height="46" />
+                    <rect class="build-window" x="278" y="268" width="54" height="46" />
+                    <path class="build-window" d="M175 268 V314 M201 268 V314 M305 268 V314 M331 268 V314" opacity="0.45" />
+                    <path class="build-door" d="M210 358 V438 H270 V358 Z" />
+                    <path class="build-door" d="M210 358 L240 342 L270 358" stroke="#F26A1B" />
+                  </g>
+
+                  <g class="build-roof" fill="none" stroke="#F26A1B" stroke-width="1.9" stroke-linejoin="miter">
+                    <path class="build-rafter" d="M112 228 L240 108 L368 228" stroke="#ffffff" stroke-width="1.3" opacity="0.55" />
+                    <path class="build-rafter" d="M168 228 L240 148 L312 228" stroke="#ffffff" stroke-width="1.2" opacity="0.4" />
+                    <path class="build-ridge" d="M96 224 L240 96 L384 224" />
+                    <path class="build-ridge" d="M240 96 V84" />
+                  </g>
+
+                  <g class="build-trowel" fill="none" stroke="#F26A1B" stroke-width="1.6">
+                    <path d="M318 400 L350 416 L340 434 L308 418 Z" />
+                    <path d="M308 418 L284 444" stroke="#ffffff" />
+                  </g>
+                </g>
+              </svg>
+              <figcaption class="build-caption">Construction simulée au défilement — pas une photographie de chantier.</figcaption>
+            </figure>
+          </div>
+          <div class="build-progress" aria-hidden="true"><span class="build-progress-bar"></span></div>
         </div>
       </section>
 
@@ -521,6 +614,6 @@
       </div>
     </footer>
 
-    <script src="./app.js" defer></script>
+    <script type="module" src="./app.js"></script>
   </body>
 </html>

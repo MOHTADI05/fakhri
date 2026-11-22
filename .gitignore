@@ -4,4 +4,5 @@ Thumbs.db
 .env.*
 node_modules/
 .vercel
+dist/
 *.log

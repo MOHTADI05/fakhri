@@ -96,6 +96,128 @@ a:hover {
   background: linear-gradient(90deg, transparent, var(--line), transparent);
 }
 
+/* House under construction */
+
+.build {
+  background: var(--bg);
+  scroll-margin-top: calc(var(--header-h) + 0.75rem);
+  height: 420vh;
+}
+
+.build-pin {
+  position: sticky;
+  top: var(--header-h);
+  height: calc(100svh - var(--header-h));
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.build-inner {
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: center;
+  padding: 1.5rem 0 2rem;
+  min-height: 0;
+}
+
+.build-copy h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 3.6vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.build-stage-label {
+  margin: 0.85rem 0 0;
+  min-height: 1.5em;
+  color: var(--text-secondary);
+  font-size: 1.0625rem;
+}
+
+.build-figure {
+  margin: 0;
+}
+
+.build-house {
+  width: min(100%, 480px);
+  height: auto;
+  margin-inline: auto;
+  overflow: visible;
+}
+
+.build-scene,
+.build-house .build-soil,
+.build-house .build-foundation,
+.build-house .build-scaffold,
+.build-house .build-window,
+.build-house .build-door,
+.build-house .build-rafter,
+.build-house .build-ridge,
+.build-house .build-trowel,
+.build-house .brick {
+  transform-box: fill-box;
+  will-change: transform, opacity;
+}
+
+.build-scene,
+.build-house .build-soil,
+.build-house .build-foundation,
+.build-house .build-window,
+.build-house .build-door {
+  transform-origin: center bottom;
+}
+
+.build-house .build-rafter,
+.build-house .build-ridge,
+.build-house .build-trowel,
+.build-house .brick {
+  transform-origin: center;
+}
+
+.build-house .build-soil,
+.build-house .build-foundation,
+.build-house .build-scaffold,
+.build-house .build-window,
+.build-house .build-door,
+.build-house .build-rafter,
+.build-house .build-ridge,
+.build-house .build-trowel,
+.build-house .brick {
+  opacity: 0;
+}
+
+.build-house .build-accent {
+  stroke: var(--accent);
+}
+
+.build-caption {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.build-progress {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.build-progress-bar {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+
 /* Header */
 
 .site-header {
@@ -783,7 +905,7 @@ a:hover {
   }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1080px) {
   .nav-toggle {
     display: inline-flex;
   }
@@ -820,10 +942,19 @@ a:hover {
   .contact-layout,
   .why-grid,
   .field-row,
-  .footer-inner {
+  .footer-inner,
+  .build-inner {
     grid-template-columns: 1fr;
     flex-direction: column;
     align-items: start;
+  }
+
+  .build-copy {
+    text-align: left;
+  }
+
+  .build {
+    height: 340vh;
   }
 
   .footer-meta {
@@ -872,6 +1003,30 @@ a:hover {
   *::after {
     animation: none !important;
     transition: none !important;
+  }
+
+  .build {
+    height: auto;
+  }
+
+  .build-pin {
+    position: relative;
+    top: 0;
+    height: auto;
+    overflow: visible;
+  }
+
+  .build-house .build-soil,
+  .build-house .build-foundation,
+  .build-house .build-scaffold,
+  .build-house .build-window,
+  .build-house .build-door,
+  .build-house .build-rafter,
+  .build-house .build-ridge,
+  .build-house .build-trowel,
+  .build-house .brick {
+    opacity: 1;
+    transform: none;
   }
 }
 
