@@ -187,7 +187,7 @@ if (heroLines.length) {
   );
 }
 
-gsap.from(".hero-copy .section-label, .hero-slogan, .hero-lead, .hero-actions, .hero-social", {
+gsap.from(".hero-slogan, .hero-lead, .hero-actions, .hero-social", {
   opacity: 0,
   y: 24,
   duration: prefersReduced ? 0.01 : 0.9,
