@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100" role="img" aria-label="Emplacement photo équipe">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EDE6D3"/>
+      <stop offset="100%" stop-color="#D9CEB5"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1100" fill="url(#bg)"/>
+  <g fill="#C4B89A">
+    <circle cx="320" cy="340" r="70"/>
+    <circle cx="480" cy="300" r="78"/>
+    <circle cx="620" cy="350" r="66"/>
+    <path d="M220 720 C240 520 280 460 320 460 C380 460 400 560 420 620 C450 520 500 440 560 440 C640 440 680 560 700 720 Z"/>
+  </g>
+  <text x="450" y="860" text-anchor="middle" font-family="system-ui,sans-serif" font-size="32" fill="#1A1A17" opacity="0.4">/assets/team.png</text>
+  <text x="450" y="910" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" fill="#E8741E">Photo détourée équipe</text>
+</svg>

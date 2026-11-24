@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="800" viewBox="0 0 640 800" role="img" aria-label="Emplacement photo client">
+  <rect width="640" height="800" fill="#E8DFC8"/>
+  <circle cx="320" cy="280" r="100" fill="#C9BDA3"/>
+  <path d="M160 700 C180 480 220 420 320 420 C420 420 460 480 480 700 Z" fill="#C9BDA3"/>
+  <text x="320" y="760" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" fill="#1A1A17" opacity="0.4">/assets/client-1.png</text>
+</svg>
