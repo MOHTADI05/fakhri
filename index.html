@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="dark" />
-    <meta name="theme-color" content="#111111" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#F6F1E4" />
     <title>Bâtikub – Maçonnerie Générale à Le Petit-Quevilly</title>
     <meta
       name="description"
@@ -32,7 +32,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
     />
     <link rel="stylesheet" href="./styles.css" />
 
@@ -64,37 +64,43 @@
     </script>
   </head>
   <body>
+    <div class="cursor" aria-hidden="true">
+      <span class="cursor-dot"></span>
+      <span class="cursor-ring"></span>
+    </div>
+
     <a class="skip-link" href="#contenu">Aller au contenu</a>
 
-    <header class="site-header" id="accueil">
+    <header class="site-header" id="site-header">
       <div class="wrap header-inner">
-        <a class="brand" href="#accueil">
-          <svg class="brand-mark" viewBox="0 0 64 64" width="40" height="40" aria-hidden="true" focusable="false">
+        <a class="brand" href="#accueil" data-magnetic>
+          <svg class="brand-mark" viewBox="0 0 64 64" width="36" height="36" aria-hidden="true">
             <path class="mark-roof" d="M8 34 L32 10 L56 34" />
             <path class="mark-wall" d="M16 34 V52 H48 V34" />
             <path class="mark-blade" d="M34 38 L48 45 L43 52 L29 45 Z" />
             <path class="mark-handle" d="M29 45 L20 55" />
           </svg>
           <span class="brand-text">
-            <span class="wordmark" aria-label="Bâtikub">
-              <span class="ba">Bâ</span><span class="tikub">tikub</span>
-            </span>
+            <span class="wordmark">Bâtikub</span>
             <span class="brand-sub">Maçonnerie Générale</span>
           </span>
         </a>
 
-        <nav class="nav" id="navigation" aria-label="Navigation principale">
+        <nav class="nav-pill" id="navigation" aria-label="Navigation principale">
           <ul class="nav-list">
-            <li><a href="#services">Expertise</a></li>
-            <li><a href="#chantier">Chantier</a></li>
-            <li><a href="#engagements">Engagements</a></li>
-            <li><a href="#ouvrages">Ouvrages</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#accueil" class="is-active" data-nav>Accueil</a></li>
+            <li><a href="#apropos" data-nav>À propos</a></li>
+            <li><a href="#services" data-nav>Services</a></li>
+            <li><a href="#realisations" data-nav>Réalisations</a></li>
+            <li><a href="#avis" data-nav>Avis</a></li>
           </ul>
         </nav>
 
         <div class="header-actions">
-          <a class="btn btn-primary" href="tel:+33752788708">Appelez-nous</a>
+          <a class="btn btn-pill btn-dark" href="#contact" data-magnetic>
+            Parlons-en
+            <span class="btn-icon" aria-hidden="true">↗</span>
+          </a>
           <button
             class="nav-toggle"
             type="button"
@@ -109,511 +115,446 @@
     </header>
 
     <main id="contenu">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-geometry" aria-hidden="true">
-          <svg class="hero-chevrons" viewBox="0 0 1200 640" preserveAspectRatio="xMaxYMin meet">
-            <g fill="none" stroke="#F26A1B" stroke-width="1.25">
-              <path d="M720 80 L860 20 L1000 80" />
-              <path d="M780 150 L920 90 L1060 150" />
-              <path d="M840 220 L980 160 L1120 220" />
-              <path d="M900 290 L1040 230 L1180 290" />
-              <path d="M960 360 L1100 300 L1240 360" />
-            </g>
-          </svg>
-        </div>
+      <!-- HERO -->
+      <section class="hero" id="accueil" aria-labelledby="hero-title">
+        <div class="hero-watermark" aria-hidden="true">BÂTIKUB</div>
 
-        <div class="wrap hero-inner">
-          <p class="eyebrow">Le Petit-Quevilly · Seine-Maritime</p>
-          <h1 id="hero-title" class="hero-logo">
-            <span class="wordmark wordmark-display" aria-label="Bâtikub">
-              <span class="ba">Bâ</span><span class="tikub">tikub</span>
-            </span>
-            <span class="hero-activity">Maçonnerie Générale</span>
-          </h1>
-          <p class="slogan">« Bâtir l'avenir, solidifier la confiance. »</p>
-          <p class="tagline">
-            <span>Construire</span>
-            <span class="dot" aria-hidden="true"></span>
-            <span>Rénover</span>
-            <span class="dot" aria-hidden="true"></span>
-            <span>Aménager</span>
-            <span class="dot" aria-hidden="true"></span>
-            <span>Embellir</span>
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary btn-lg" href="tel:+33752788708">Appelez-nous</a>
-            <a class="btn btn-secondary btn-lg" href="#contact">Demander un devis</a>
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <p class="section-label">// Accueil</p>
+            <h1 id="hero-title" class="hero-title split-lines">
+              <span class="line-wrap"><span class="line">Bâtir l'avenir,</span></span>
+              <span class="line-wrap"><span class="line">solidifier la confiance.</span></span>
+            </h1>
+            <p class="hero-lead">
+              Construire, rénover, aménager et embellir — maçonnerie générale
+              à Le Petit-Quevilly, Seine-Maritime.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-pill btn-dark btn-lg" href="#contact" data-magnetic>
+                Demander un devis gratuit
+                <span class="btn-icon" aria-hidden="true">↗</span>
+              </a>
+              <a class="btn btn-text" href="#services">Découvrir nos services</a>
+            </div>
+            <div class="hero-social">
+              <a href="tel:+33752788708" class="social-pill" aria-label="Appeler Bâtikub">
+                <span>07 52 78 87 08</span>
+              </a>
+              <a
+                href="https://www.instagram.com/"
+                class="social-pill social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >in</a>
+              <a
+                href="mailto:fakhreddinemarmouri@yahoo.fr"
+                class="social-pill social-icon"
+                aria-label="E-mail"
+              >@</a>
+            </div>
           </div>
-          <p class="hero-phone">
-            <a href="tel:+33752788708">07 52 78 87 08</a>
-          </p>
+
+          <div class="hero-stage">
+            <div class="hero-arch" aria-hidden="true">
+              <div class="hero-arch-shell">
+                <div class="hero-arch-inner">
+                  <div class="hero-arch-floor"></div>
+                  <svg class="hero-curves" viewBox="0 0 520 640" preserveAspectRatio="none">
+                    <path d="M40 80 C180 40 340 120 480 60" fill="none" stroke="#E8741E" stroke-width="1.2" opacity="0.4" />
+                    <path d="M20 200 C160 140 360 220 500 160" fill="none" stroke="#E8741E" stroke-width="1" opacity="0.22" />
+                    <path d="M60 520 C200 460 320 560 460 480" fill="none" stroke="#E8741E" stroke-width="1.1" opacity="0.3" />
+                  </svg>
+                  <img
+                    class="hero-fallback"
+                    src="/assets/hero-house.svg"
+                    alt="Illustration d'une maison en maçonnerie Bâtikub"
+                    width="800"
+                    height="900"
+                    decoding="async"
+                  />
+                  <canvas id="hero-canvas" class="hero-canvas" aria-hidden="true"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <aside class="hero-stats" aria-label="Chiffres clés">
+              <div class="hero-stat">
+                <strong><span data-count="15" data-suffix="">0</span>+</strong>
+                <span>ans d'expérience</span>
+              </div>
+              <div class="hero-stat">
+                <strong><span data-count="980" data-suffix="">0</span>+</strong>
+                <span>chantiers réalisés</span>
+              </div>
+              <button class="play-btn" type="button" aria-label="Voir une présentation" data-magnetic>
+                <span aria-hidden="true">▶</span>
+              </button>
+            </aside>
+
+            <div class="hero-tags">
+              <span class="tag-pill">Gros œuvre</span>
+              <span class="tag-pill">Rénovation</span>
+              <span class="tag-pill">Carrelage</span>
+              <button class="tag-more" type="button" aria-label="Plus de services">+</button>
+            </div>
+          </div>
         </div>
       </section>
 
-      <div class="mortar" aria-hidden="true"></div>
-
-      <section class="build" id="chantier" aria-labelledby="build-title">
-        <div class="build-pin">
-          <div class="wrap build-inner">
-            <header class="build-copy">
-              <p class="eyebrow">Chantier</p>
-              <h2 id="build-title">La maison s'élève</h2>
-              <p class="build-stage-label" id="build-stage-label" aria-live="polite">Préparation du terrain</p>
-            </header>
-
-            <figure class="build-figure">
-              <svg
-                class="build-house"
-                viewBox="0 0 480 540"
-                role="img"
-                aria-labelledby="build-svg-title build-svg-desc"
-              >
-                <title id="build-svg-title">Maison en construction</title>
-                <desc id="build-svg-desc">
-                  Une maison se construit au fil du défilement : excavation, fondations, briques, ouvertures, puis toiture.
-                </desc>
-
-                <g class="build-scene">
-                  <g class="build-dust" fill="#F26A1B" opacity="0.35">
-                    <circle class="dust" cx="86" cy="300" r="1.4" />
-                    <circle class="dust" cx="118" cy="210" r="1.1" />
-                    <circle class="dust" cx="390" cy="250" r="1.3" />
-                    <circle class="dust" cx="410" cy="340" r="1" />
-                    <circle class="dust" cx="70" cy="380" r="1.2" />
-                    <circle class="dust" cx="360" cy="180" r="1" />
-                    <circle class="dust" cx="200" cy="150" r="1.1" />
-                    <circle class="dust" cx="300" cy="130" r="0.9" />
-                  </g>
-
-                  <g class="build-soil" fill="none" stroke="#8a5a3a" stroke-width="1.4">
-                    <path d="M40 470 H440" stroke="#c8c8c8" />
-                    <path d="M78 470 L98 438 H382 L402 470" opacity="0.7" />
-                    <path d="M110 454 H370" opacity="0.35" />
-                  </g>
-
-                  <g class="build-scaffold" fill="none" stroke="rgba(242,106,27,0.5)" stroke-width="1.15">
-                    <path d="M56 470 V150" />
-                    <path d="M424 470 V150" />
-                    <path d="M56 410 H108" />
-                    <path d="M56 340 H108" />
-                    <path d="M56 260 H108" />
-                    <path d="M56 190 H108" />
-                    <path d="M372 410 H424" />
-                    <path d="M372 340 H424" />
-                    <path d="M372 260 H424" />
-                    <path d="M372 190 H424" />
-                    <path d="M48 150 H68 M412 150 H432" />
-                  </g>
-
-                  <g class="build-foundation" fill="#1a1a1a" stroke="#F26A1B" stroke-width="1.7">
-                    <rect x="92" y="438" width="296" height="28" />
-                    <path d="M92 452 H388" fill="none" />
-                    <path d="M108 438 V424" fill="none" stroke="#ffffff" opacity="0.45" />
-                    <path d="M372 438 V424" fill="none" stroke="#ffffff" opacity="0.45" />
-                  </g>
-
-                  <g class="build-bricks" fill="#2a2a2a" stroke="#d8d8d8" stroke-width="0.85"></g>
-
-                  <g class="build-openings" fill="none" stroke="#ffffff" stroke-width="1.45">
-                    <rect class="build-window" x="148" y="268" width="54" height="46" />
-                    <rect class="build-window" x="278" y="268" width="54" height="46" />
-                    <path class="build-window" d="M175 268 V314 M201 268 V314 M305 268 V314 M331 268 V314" opacity="0.45" />
-                    <path class="build-door" d="M210 358 V438 H270 V358 Z" />
-                    <path class="build-door" d="M210 358 L240 342 L270 358" stroke="#F26A1B" />
-                  </g>
-
-                  <g class="build-roof" fill="none" stroke="#F26A1B" stroke-width="1.9" stroke-linejoin="miter">
-                    <path class="build-rafter" d="M112 228 L240 108 L368 228" stroke="#ffffff" stroke-width="1.3" opacity="0.55" />
-                    <path class="build-rafter" d="M168 228 L240 148 L312 228" stroke="#ffffff" stroke-width="1.2" opacity="0.4" />
-                    <path class="build-ridge" d="M96 224 L240 96 L384 224" />
-                    <path class="build-ridge" d="M240 96 V84" />
-                  </g>
-
-                  <g class="build-trowel" fill="none" stroke="#F26A1B" stroke-width="1.6">
-                    <path d="M318 400 L350 416 L340 434 L308 418 Z" />
-                    <path d="M308 418 L284 444" stroke="#ffffff" />
-                  </g>
-                </g>
-              </svg>
-              <figcaption class="build-caption">Construction simulée au défilement — pas une photographie de chantier.</figcaption>
-            </figure>
-          </div>
-          <div class="build-progress" aria-hidden="true"><span class="build-progress-bar"></span></div>
-        </div>
-      </section>
-
-      <div class="mortar" aria-hidden="true"></div>
-
-      <section class="section" id="services" aria-labelledby="services-title">
+      <!-- SERVICES -->
+      <section class="section services" id="services" aria-labelledby="services-title">
         <div class="wrap">
           <header class="section-head">
-            <p class="eyebrow">Savoir-faire</p>
-            <h2 id="services-title">Notre expertise à votre service</h2>
-            <p class="lede">
-              Du gros œuvre aux finitions, Bâtikub accompagne vos projets de construction,
-              d'extension et de rénovation, à Le Petit-Quevilly et dans l'agglomération rouennaise.
-            </p>
+            <p class="section-label">// Services</p>
+            <h2 id="services-title" class="section-title split-lines">
+              <span class="line-wrap"><span class="line">Notre expertise</span></span>
+              <span class="line-wrap"><span class="line">à votre service</span></span>
+            </h2>
           </header>
 
-          <ul class="service-grid">
-            <li class="card">
-              <span class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 32 32">
-                  <path d="M4 26 V14 L16 6 L28 14 V26" />
-                  <path d="M4 26 H28" />
-                  <path d="M12 26 V18 H20 V26" />
-                </svg>
-              </span>
-              <h3>Gros œuvre</h3>
-              <p>Fondations, murs, dalles, planchers et ouvrages en béton, posés pour porter durablement le bâtiment.</p>
+          <div class="services-deco" id="services-deco" aria-hidden="true"></div>
+
+          <ul class="arch-grid">
+            <li class="arch-card" style="--i: 0">
+              <div class="arch-card-inner">
+                <h3>Gros œuvre</h3>
+                <p>Fondations, murs, dalles et ouvrages en béton pour porter durablement le bâtiment.</p>
+                <a class="link-arrow" href="#contact">En savoir plus <span aria-hidden="true">↗</span></a>
+              </div>
             </li>
-            <li class="card">
-              <span class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 32 32">
-                  <rect x="4" y="18" width="10" height="6" />
-                  <rect x="14" y="12" width="10" height="6" />
-                  <rect x="18" y="6" width="10" height="6" />
-                  <path d="M4 26 H28" />
-                </svg>
-              </span>
-              <h3>Maçonnerie</h3>
-              <p>Construction, extension, murets, clôtures et terrasses — l'enveloppe et les ouvrages extérieurs de la maison.</p>
+            <li class="arch-card" style="--i: 1">
+              <div class="arch-card-inner">
+                <h3>Maçonnerie</h3>
+                <p>Construction, extension, murets, clôtures et terrasses — l'enveloppe de la maison.</p>
+                <a class="link-arrow" href="#contact">En savoir plus <span aria-hidden="true">↗</span></a>
+              </div>
             </li>
-            <li class="card">
-              <span class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 32 32">
-                  <path d="M6 24 L6 10 L16 6 L26 10 V24" />
-                  <path d="M12 24 V16 H20 V24" />
-                  <path d="M8 12 L16 8.5 L24 12" />
-                </svg>
-              </span>
-              <h3>Rénovation</h3>
-              <p>Rénovation complète, réhabilitation et mise aux normes, pour donner une seconde vie à l'existant.</p>
+            <li class="arch-card" style="--i: 2">
+              <div class="arch-card-inner">
+                <h3>Rénovation</h3>
+                <p>Réhabilitation et mise aux normes pour donner une seconde vie à l'existant.</p>
+                <a class="link-arrow" href="#contact">En savoir plus <span aria-hidden="true">↗</span></a>
+              </div>
             </li>
-            <li class="card">
-              <span class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 32 32">
-                  <path d="M6 26 V10 H26 V26" />
-                  <path d="M6 14 H26" />
-                  <path d="M10 10 V6 H22 V10" />
-                </svg>
-              </span>
-              <h3>Finitions &amp; enduits</h3>
-              <p>Enduits intérieurs et extérieurs, lissage et rejointoiement : des surfaces nettes, prêtes à durer.</p>
+            <li class="arch-card" style="--i: 3">
+              <div class="arch-card-inner">
+                <h3>Enduits</h3>
+                <p>Enduits intérieurs et extérieurs, lissage et rejointoiement soignés.</p>
+                <a class="link-arrow" href="#contact">En savoir plus <span aria-hidden="true">↗</span></a>
+              </div>
             </li>
-            <li class="card">
-              <span class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 32 32">
-                  <path d="M6 8 H26 V24 H6 Z" />
-                  <path d="M6 14 H26" />
-                  <path d="M16 8 V24" />
-                  <path d="M10 18 H14" />
-                  <path d="M18 11 H22" />
-                </svg>
-              </span>
-              <h3>Embellissement des murs</h3>
-              <p>Habillage décoratif, parement, pierre et effets décoratifs pour affirmer le caractère des façades et des pièces.</p>
+            <li class="arch-card" style="--i: 4">
+              <div class="arch-card-inner">
+                <h3>Carrelage</h3>
+                <p>Pose de carrelage, faïence et mosaïque au sol comme au mur.</p>
+                <a class="link-arrow" href="#contact">En savoir plus <span aria-hidden="true">↗</span></a>
+              </div>
             </li>
-            <li class="card">
-              <span class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 32 32">
-                  <path d="M4 12 H28" />
-                  <path d="M8 12 V8 H24 V12" />
-                  <path d="M16 8 V4" />
-                  <circle cx="16" cy="18" r="4" />
-                  <path d="M6 26 H26" />
-                </svg>
-              </span>
-              <h3>Faux plafonds, corniches &amp; moulures</h3>
-              <p>Rosaces, corniches et moulures : des finitions élégantes qui structurent le volume et la lumière.</p>
-            </li>
-            <li class="card">
-              <span class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 32 32">
-                  <rect x="5" y="5" width="10" height="10" />
-                  <rect x="17" y="5" width="10" height="10" />
-                  <rect x="5" y="17" width="10" height="10" />
-                  <rect x="17" y="17" width="10" height="10" />
-                </svg>
-              </span>
-              <h3>Carrelage &amp; faïence</h3>
-              <p>Pose de carrelage, faïence et mosaïque, au sol comme au mur, avec un calepinage soigné.</p>
-            </li>
-            <li class="card">
-              <span class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 32 32">
-                  <path d="M8 24 L14 8 H18 L24 24" />
-                  <path d="M11 16 H21" />
-                  <path d="M6 26 H26" />
-                </svg>
-              </span>
-              <h3>Peinture</h3>
-              <p>Peinture intérieure et extérieure, en neuf comme en rénovation, pour clore le chantier dans les règles.</p>
+            <li class="arch-card" style="--i: 5">
+              <div class="arch-card-inner">
+                <h3>Peinture</h3>
+                <p>Peinture intérieure et extérieure pour clore le chantier dans les règles.</p>
+                <a class="link-arrow" href="#contact">En savoir plus <span aria-hidden="true">↗</span></a>
+              </div>
             </li>
           </ul>
         </div>
       </section>
 
-      <div class="mortar" aria-hidden="true"></div>
-
-      <section class="section section-why" id="engagements" aria-labelledby="why-title">
-        <div class="wrap">
-          <header class="section-head">
-            <p class="eyebrow">Pourquoi Bâtikub</p>
-            <h2 id="why-title">Un chantier conduit avec méthode</h2>
-            <p class="lede">
-              La qualité aujourd'hui, la solidité pour demain : trois engagements qui encadrent chaque intervention.
+      <!-- À PROPOS -->
+      <section class="section about" id="apropos" aria-labelledby="about-title">
+        <div class="wrap about-grid">
+          <div class="about-copy">
+            <p class="section-label">// À propos</p>
+            <h2 id="about-title" class="section-title section-title-xl split-lines">
+              <span class="line-wrap"><span class="line">Qui</span></span>
+              <span class="line-wrap"><span class="line">sommes-</span></span>
+              <span class="line-wrap"><span class="line">nous</span></span>
+            </h2>
+            <p class="about-text">
+              Bâtikub est une entreprise de maçonnerie générale basée au Petit-Quevilly.
+              Nous accompagnons particuliers et professionnels du gros œuvre aux finitions,
+              avec exigence, transparence et respect des délais.
             </p>
-          </header>
+            <a class="btn btn-pill btn-dark" href="#contact" data-magnetic>
+              Rencontrer l'équipe
+              <span class="btn-icon" aria-hidden="true">↗</span>
+            </a>
 
-          <ol class="why-grid">
-            <li class="why-item">
-              <h3>Travail soigné et durable</h3>
-              <p>
-                Matériaux adaptés, joints réguliers, aplombs et niveaux contrôlés. L'ouvrage est pensé pour
-                le quotidien et pour les années qui suivent.
-              </p>
-            </li>
-            <li class="why-item">
-              <h3>Respect des délais et des normes</h3>
-              <p>
-                Un planning annoncé, des étapes tenues, et une exécution alignée sur les règles de l'art
-                et les normes en vigueur.
-              </p>
-            </li>
-            <li class="why-item">
-              <h3>Écoute, conseils et accompagnement</h3>
-              <p>
-                Un interlocuteur unique, du premier échange jusqu'à la réception : on clarifie le besoin,
-                on propose, on réalise.
-              </p>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <div class="mortar" aria-hidden="true"></div>
-
-      <section class="section" id="ouvrages" aria-labelledby="gallery-title">
-        <div class="wrap">
-          <header class="section-head">
-            <p class="eyebrow">Langage du chantier</p>
-            <h2 id="gallery-title">Ouvrages</h2>
-            <p class="lede">
-              Schémas architecturaux — élévations et assemblages. Ils illustrent le geste, pas un chantier photographié.
-            </p>
-          </header>
-
-          <ul class="gallery-grid">
-            <li class="gallery-item">
-              <figure>
-                <svg class="elevation" viewBox="0 0 320 220" role="img" aria-labelledby="g1-title g1-desc">
-                  <title id="g1-title">Élévation — gros œuvre</title>
-                  <desc id="g1-desc">Dessin au trait d'une façade avec toiture en chevron, baies et soubassement.</desc>
-                  <rect class="elev-bg" x="0" y="0" width="320" height="220" />
-                  <g fill="none" stroke="currentColor" stroke-width="1.2">
-                    <path class="elev-accent" d="M40 88 L160 28 L280 88" />
-                    <path d="M56 88 V188 H264 V88" />
-                    <path d="M56 188 H264" />
-                    <rect x="92" y="112" width="44" height="52" />
-                    <rect x="184" y="112" width="44" height="52" />
-                    <path d="M148 148 V188 H172 V148 Z" />
-                    <path d="M56 168 H264" opacity="0.45" />
-                  </g>
-                </svg>
-                <figcaption>Élévation — gros œuvre</figcaption>
-              </figure>
-            </li>
-            <li class="gallery-item">
-              <figure>
-                <svg class="elevation" viewBox="0 0 320 220" role="img" aria-labelledby="g2-title g2-desc">
-                  <title id="g2-title">Appareillage — maçonnerie</title>
-                  <desc id="g2-desc">Trame de joints de maçonnerie, appareil en panneresse.</desc>
-                  <rect class="elev-bg" x="0" y="0" width="320" height="220" />
-                  <g fill="none" stroke="currentColor" stroke-width="1.1">
-                    <path d="M28 40 H292 V180 H28 Z" />
-                    <path d="M28 68 H292 M28 96 H292 M28 124 H292 M28 152 H292" />
-                    <path d="M94 40 V68 M160 40 V68 M226 40 V68" />
-                    <path d="M62 68 V96 M128 68 V96 M194 68 V96 M260 68 V96" />
-                    <path d="M94 96 V124 M160 96 V124 M226 96 V124" />
-                    <path d="M62 124 V152 M128 124 V152 M194 124 V152 M260 124 V152" />
-                    <path d="M94 152 V180 M160 152 V180 M226 152 V180" />
-                  </g>
-                </svg>
-                <figcaption>Appareillage — maçonnerie</figcaption>
-              </figure>
-            </li>
-            <li class="gallery-item">
-              <figure>
-                <svg class="elevation" viewBox="0 0 320 220" role="img" aria-labelledby="g3-title g3-desc">
-                  <title id="g3-title">Plan — terrasse et muret</title>
-                  <desc id="g3-desc">Plan schématique d'une terrasse bordée d'un muret.</desc>
-                  <rect class="elev-bg" x="0" y="0" width="320" height="220" />
-                  <g fill="none" stroke="currentColor" stroke-width="1.2">
-                    <rect x="36" y="36" width="248" height="148" />
-                    <rect x="52" y="52" width="216" height="116" />
-                    <path d="M52 90 H268 M52 128 H268" opacity="0.5" />
-                    <path d="M124 52 V168 M196 52 V168" opacity="0.5" />
-                    <path class="elev-accent" d="M36 184 L160 200 L284 184" />
-                  </g>
-                </svg>
-                <figcaption>Plan — terrasse et muret</figcaption>
-              </figure>
-            </li>
-            <li class="gallery-item">
-              <figure>
-                <svg class="elevation" viewBox="0 0 320 220" role="img" aria-labelledby="g4-title g4-desc">
-                  <title id="g4-title">Coupe — corniche et plafond</title>
-                  <desc id="g4-desc">Coupe d'un plafond avec corniche et moulure.</desc>
-                  <rect class="elev-bg" x="0" y="0" width="320" height="220" />
-                  <g fill="none" stroke="currentColor" stroke-width="1.2">
-                    <path d="M40 48 H280" />
-                    <path d="M40 48 V72 H64 V48" />
-                    <path d="M280 48 V72 H256 V48" />
-                    <path class="elev-accent" d="M64 72 C96 72 96 88 128 88 H192 C224 88 224 72 256 72" />
-                    <circle cx="160" cy="118" r="18" />
-                    <path d="M160 100 V88" />
-                    <path d="M40 188 H280" opacity="0.4" />
-                    <path d="M72 188 V140 H248 V188" opacity="0.55" />
-                  </g>
-                </svg>
-                <figcaption>Coupe — corniche et plafond</figcaption>
-              </figure>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div class="mortar" aria-hidden="true"></div>
-
-      <section class="section" id="contact" aria-labelledby="contact-title">
-        <div class="wrap contact-layout">
-          <div class="contact-copy">
-            <header class="section-head section-head-left">
-              <p class="eyebrow">Contact</p>
-              <h2 id="contact-title">Parlons de votre projet</h2>
-              <p class="lede">
-                Un appel ou un message suffit. Nous revenons vers vous pour préciser le besoin
-                et convenir d'une visite.
-              </p>
-            </header>
-
-            <ul class="contact-list">
-              <li>
-                <span class="contact-label">Téléphone</span>
-                <a href="tel:+33752788708">07 52 78 87 08</a>
+            <ul class="stat-stack">
+              <li class="stat-card">
+                <strong><span data-count="98" data-suffix=" %">0</span></strong>
+                <span>de clients satisfaits</span>
               </li>
-              <li>
-                <span class="contact-label">E-mail</span>
-                <a href="mailto:fakhreddinemarmouri@yahoo.fr">fakhreddinemarmouri@yahoo.fr</a>
+              <li class="stat-card">
+                <strong><span data-count="980" data-suffix="">0</span></strong>
+                <span>chantiers réalisés</span>
               </li>
-              <li>
-                <span class="contact-label">Adresse</span>
-                <a
-                  href="https://www.google.com/maps/search/?api=1&amp;query=167%20C%20Avenue%20des%20Alli%C3%A9s%2C%2076140%20Le%20Petit%20Quevilly"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  167 C Avenue des Alliés<br />
-                  76140 Le Petit-Quevilly
-                  <span class="map-hint">Ouvrir dans Google Maps</span>
-                </a>
-              </li>
-              <li>
-                <span class="contact-label">Site</span>
-                <a href="https://www.batikub.com">www.batikub.com</a>
+              <li class="stat-card">
+                <strong><span data-count="15" data-suffix=" ans">0</span></strong>
+                <span>d'expérience terrain</span>
               </li>
             </ul>
           </div>
 
-          <form class="contact-form" id="devis-form" novalidate>
-            <p class="form-intro">Votre message s'ouvre dans votre messagerie, à destination de Bâtikub. Aucune donnée n'est envoyée sur un serveur.</p>
-
-            <div class="field">
-              <label for="nom">Nom</label>
-              <input
-                id="nom"
-                name="nom"
-                type="text"
-                autocomplete="name"
-                maxlength="120"
-                required
-                placeholder="Jean Dupont"
+          <div class="about-visual">
+            <div class="about-shape" aria-hidden="true"></div>
+            <div class="about-frame reveal-mask">
+              <img
+                src="/assets/team.svg"
+                alt="Équipe Bâtikub en tenue de chantier — emplacement photo détourée"
+                width="560"
+                height="700"
+                loading="lazy"
+                class="parallax-img"
               />
-              <p class="field-error" id="nom-error" hidden></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RÉALISATIONS (gallery strip) -->
+      <section class="section works" id="realisations" aria-labelledby="works-title">
+        <div class="wrap">
+          <header class="section-head section-head-row">
+            <div>
+              <p class="section-label">// Réalisations</p>
+              <h2 id="works-title" class="section-title split-lines">
+                <span class="line-wrap"><span class="line">Chantiers &amp;</span></span>
+                <span class="line-wrap"><span class="line">ouvrages</span></span>
+              </h2>
+            </div>
+            <p class="section-aside">
+              Remplacez ces emplacements par vos photos de chantier détourées
+              (<code>/assets/works-*.png</code>.
+            </p>
+          </header>
+
+          <ul class="works-grid">
+            <li class="work-card reveal-mask">
+              <img src="/assets/chantier-1.svg" alt="Chantier gros œuvre — emplacement" width="400" height="400" loading="lazy" />
+              <span>Gros œuvre</span>
+            </li>
+            <li class="work-card reveal-mask">
+              <img src="/assets/chantier-2.svg" alt="Maçonnerie — emplacement" width="400" height="400" loading="lazy" />
+              <span>Maçonnerie</span>
+            </li>
+            <li class="work-card reveal-mask">
+              <img src="/assets/chantier-3.svg" alt="Rénovation — emplacement" width="400" height="400" loading="lazy" />
+              <span>Rénovation</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- AVIS -->
+      <section class="section reviews" id="avis" aria-labelledby="reviews-title">
+        <div class="wrap">
+          <header class="section-head section-head-row">
+            <div>
+              <p class="section-label">// Avis</p>
+              <h2 id="reviews-title" class="section-title split-lines">
+                <span class="line-wrap"><span class="line">Ce que disent</span></span>
+                <span class="line-wrap"><span class="line">nos clients</span></span>
+              </h2>
+            </div>
+            <p class="section-aside">
+              Des témoignages issus de chantiers réels à Le Petit-Quevilly
+              et dans l'agglomération rouennaise.
+            </p>
+          </header>
+
+          <div class="review-carousel" data-carousel>
+            <div class="review-visual reveal-mask">
+              <img
+                id="review-photo"
+                src="/assets/client-1.svg"
+                alt="Portrait client — emplacement photo détourée"
+                width="420"
+                height="520"
+                loading="lazy"
+              />
+            </div>
+            <blockquote class="review-quote">
+              <span class="quote-mark" aria-hidden="true">“</span>
+              <p id="review-text">
+                Un travail soigné, des délais tenus et une équipe à l'écoute.
+                Notre extension a été livrée dans les règles de l'art.
+              </p>
+              <footer>
+                <cite id="review-name">Marie L.</cite>
+                <span class="review-counter" id="review-counter">01/03</span>
+              </footer>
+              <div class="review-nav">
+                <button type="button" class="round-btn" data-prev aria-label="Avis précédent" data-magnetic>←</button>
+                <button type="button" class="round-btn" data-next aria-label="Avis suivant" data-magnetic>→</button>
+              </div>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA TIMELINE -->
+      <section class="section cta-pin" id="projet" aria-labelledby="cta-title">
+        <div class="cta-pin-inner">
+          <div class="wrap cta-layout">
+            <div class="cta-copy">
+              <p class="section-label">// Projet</p>
+              <h2 id="cta-title" class="section-title section-title-xl split-lines">
+                <span class="line-wrap"><span class="line">Prêt à discuter</span></span>
+                <span class="line-wrap"><span class="line">de votre projet ?</span></span>
+              </h2>
+              <a class="btn btn-pill btn-dark btn-lg" href="#contact" data-magnetic>
+                Planifier un rendez-vous
+                <span class="btn-icon" aria-hidden="true">↗</span>
+              </a>
             </div>
 
-            <div class="field-row">
-              <div class="field">
-                <label for="telephone">Téléphone</label>
-                <input
-                  id="telephone"
-                  name="telephone"
-                  type="tel"
-                  autocomplete="tel"
-                  inputmode="tel"
-                  maxlength="24"
-                  required
-                  placeholder="07 00 00 00 00"
+            <div class="cta-timeline" aria-hidden="true">
+              <svg class="pulse-svg" viewBox="0 0 640 200" preserveAspectRatio="none">
+                <path
+                  id="pulse-path"
+                  class="pulse-path"
+                  d="M0 100 C80 100 100 40 160 40 C220 40 240 160 300 160 C360 160 380 60 440 60 C500 60 520 120 580 120 L640 120"
+                  fill="none"
+                  stroke="#E8741E"
+                  stroke-width="2"
                 />
-                <p class="field-error" id="telephone-error" hidden></p>
+              </svg>
+              <div class="pulse-bubbles">
+                <img class="pulse-bubble" src="/assets/chantier-1.svg" alt="" width="56" height="56" style="--t: 0.15" />
+                <img class="pulse-bubble" src="/assets/chantier-2.svg" alt="" width="56" height="56" style="--t: 0.45" />
+                <img class="pulse-bubble" src="/assets/chantier-3.svg" alt="" width="56" height="56" style="--t: 0.75" />
               </div>
-              <div class="field">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div class="wrap contact-grid">
+          <figure class="contact-photo reveal-mask">
+            <img
+              src="/assets/artisan.svg"
+              alt="Artisan ou chef de chantier Bâtikub — emplacement photo verticale"
+              width="480"
+              height="680"
+              loading="lazy"
+              class="parallax-img"
+            />
+          </figure>
+
+          <div class="contact-panel">
+            <p class="section-label">// Contact</p>
+            <h2 id="contact-title" class="section-title">Parlons de votre projet</h2>
+
+            <form class="contact-form" id="devis-form" novalidate>
+              <p class="form-intro">
+                Votre message s'ouvre dans votre messagerie. Aucune donnée n'est envoyée sur un serveur.
+              </p>
+
+              <div class="field-line">
+                <label for="nom">Nom</label>
+                <input id="nom" name="nom" type="text" autocomplete="name" maxlength="120" required />
+                <p class="field-error" id="nom-error" hidden></p>
+              </div>
+
+              <div class="field-line">
                 <label for="email">E-mail</label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autocomplete="email"
-                  inputmode="email"
-                  maxlength="120"
-                  required
-                  placeholder="nom@exemple.fr"
-                />
+                <input id="email" name="email" type="email" autocomplete="email" maxlength="120" required />
                 <p class="field-error" id="email-error" hidden></p>
               </div>
-            </div>
 
-            <div class="field">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                maxlength="2000"
-                required
-                placeholder="Décrivez le projet : construction, extension, rénovation…"
-              ></textarea>
-              <p class="field-error" id="message-error" hidden></p>
-            </div>
+              <div class="field-line">
+                <label for="telephone">Téléphone</label>
+                <input id="telephone" name="telephone" type="tel" autocomplete="tel" maxlength="24" required />
+                <p class="field-error" id="telephone-error" hidden></p>
+              </div>
 
-            <button class="btn btn-primary btn-lg" type="submit">Envoyer le message</button>
-            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-          </form>
+              <div class="field-line">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="3" maxlength="2000" required></textarea>
+                <p class="field-error" id="message-error" hidden></p>
+              </div>
+
+              <label class="consent">
+                <input type="checkbox" name="rgpd" id="rgpd" required />
+                <span>
+                  J'accepte que mes données soient utilisées pour me recontacter
+                  dans le cadre de ma demande (RGPD).
+                </span>
+              </label>
+
+              <button class="btn btn-pill btn-dark btn-block" type="submit" data-magnetic>
+                Envoyer le message
+                <span class="btn-icon" aria-hidden="true">↗</span>
+              </button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="wrap footer-inner">
-        <div class="footer-brand">
-          <p class="wordmark wordmark-footer" aria-label="Bâtikub">
-            <span class="ba">Bâ</span><span class="tikub">tikub</span>
-          </p>
-          <p class="footer-line">La qualité aujourd'hui, la solidité pour demain.</p>
+      <div class="wrap">
+        <div class="footer-top">
+          <h2 class="footer-title">Un projet en tête ? Demandez votre devis</h2>
+          <form class="newsletter" aria-label="Newsletter">
+            <label class="sr-only" for="newsletter-email">Votre e-mail</label>
+            <input id="newsletter-email" type="email" placeholder="Votre e-mail" />
+            <button type="submit" class="btn btn-pill btn-dark" data-magnetic>
+              S'inscrire <span class="btn-icon" aria-hidden="true">↗</span>
+            </button>
+          </form>
         </div>
-        <div class="footer-meta">
-          <p>
-            <a href="tel:+33752788708">07 52 78 87 08</a>
-            <span aria-hidden="true"> · </span>
-            <a href="mailto:fakhreddinemarmouri@yahoo.fr">fakhreddinemarmouri@yahoo.fr</a>
-          </p>
-          <p>167 C Avenue des Alliés, 76140 Le Petit-Quevilly</p>
-          <p class="footer-legal">© <span id="year">2026</span> Bâtikub – Maçonnerie Générale</p>
+
+        <div class="footer-cols">
+          <div>
+            <h3>Liens rapides</h3>
+            <ul>
+              <li><a href="#accueil">Accueil</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#apropos">À propos</a></li>
+              <li><a href="#avis">Avis</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Entreprise</h3>
+            <ul>
+              <li><a href="tel:+33752788708">07 52 78 87 08</a></li>
+              <li><a href="mailto:fakhreddinemarmouri@yahoo.fr">E-mail</a></li>
+              <li><a href="https://www.batikub.com">www.batikub.com</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Localisation</h3>
+            <ul>
+              <li>167 C Avenue des Alliés</li>
+              <li>76140 Le Petit-Quevilly</li>
+              <li>Seine-Maritime (76)</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Réseaux</h3>
+            <ul>
+              <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+              <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-legal">
+          <p>© <span id="year">2026</span> Bâtikub – Maçonnerie Générale</p>
+          <p>La qualité aujourd'hui, la solidité pour demain.</p>
         </div>
       </div>
     </footer>
 
-    <script type="module" src="./app.js"></script>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>

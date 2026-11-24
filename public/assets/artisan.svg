@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="1000" viewBox="0 0 700 1000" role="img" aria-label="Emplacement photo artisan">
+  <defs>
+    <linearGradient id="a" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E5DAC2"/>
+      <stop offset="100%" stop-color="#D0C4A8"/>
+    </linearGradient>
+  </defs>
+  <rect width="700" height="1000" fill="url(#a)"/>
+  <circle cx="350" cy="280" r="95" fill="#B8AB8E"/>
+  <path d="M180 900 C200 520 250 450 350 450 C450 450 500 520 520 900 Z" fill="#B8AB8E"/>
+  <rect x="300" y="500" width="100" height="18" rx="4" fill="#E8741E" opacity="0.7"/>
+  <text x="350" y="940" text-anchor="middle" font-family="system-ui,sans-serif" font-size="26" fill="#1A1A17" opacity="0.4">/assets/artisan.png</text>
+</svg>
